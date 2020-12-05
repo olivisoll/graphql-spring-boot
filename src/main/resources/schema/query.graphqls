@@ -1,0 +1,35 @@
+type Query {
+	firstQuery : String
+	secondQuery : String
+	fullName(firstName : String, lastName : String) : String
+	fullNameV2(sampleRequest : SampleRequest) : String
+	student(id : Long) : StudentResponse
+}
+
+"""
+ ! = null value is not allowed
+
+"""
+input SampleRequest {
+	firstName : String!
+	lastName : String
+}
+
+"""
+ Respuesta para object Student
+"""
+type StudentResponse {
+	id : Long
+	firstName : String
+	lastName : String
+	email : String
+	street : String
+	city : String
+	learningSubjects : [SubjectResponse]
+}
+
+type SubjectResponse {
+	id : Long
+	subjectName : String
+	marksObtained : Float
+}
