@@ -1,0 +1,26 @@
+"""
+ Respuesta para object Student
+"""
+type StudentResponse {
+	id : Long
+	firstName : String
+	lastName : String
+	fullName : String
+	email : String
+	street : String
+	city : String
+	learningSubjects(subjectNameFilter : SubjectNameFilter) : [SubjectResponse]
+}
+
+type SubjectResponse {
+	id : Long
+	subjectName : String
+	marksObtained : Float
+}
+
+enum SubjectNameFilter {
+	All,
+	Java,
+	MySQL,
+	MongoDB
+}

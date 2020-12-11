@@ -14,23 +14,3 @@ input SampleRequest {
 	firstName : String!
 	lastName : String
 }
-
-"""
- Respuesta para object Student
-"""
-type StudentResponse {
-	id : Long
-	firstName : String
-	lastName : String
-	fullName : String
-	email : String
-	street : String
-	city : String
-	learningSubjects : [SubjectResponse]
-}
-
-type SubjectResponse {
-	id : Long
-	subjectName : String
-	marksObtained : Float
-}
